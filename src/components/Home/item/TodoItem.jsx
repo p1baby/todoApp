@@ -1,11 +1,11 @@
+import cn from 'classnames'
 import React from 'react'
+import { BsTrash } from 'react-icons/bs'
 import Check from './Check'
-import cn from 'classnames';
-import {BsTrash} from 'react-icons/bs'
 
 const TodoItem = ({todo, changeTodolist, removeTodo }) => {
   return (
-		<div className='flex items-center justify-between mb-4 rounded-2xl bg-zinc-800 p-5 w-full'>
+		<section className='flex items-center justify-between mb-4 rounded-2xl bg-zinc-800 p-5 w-full'>
 			<button
 				className='flex items-center'
 				onClick={() => changeTodolist(todo._id)}
@@ -25,7 +25,7 @@ const TodoItem = ({todo, changeTodolist, removeTodo }) => {
 					className='text-gray-600 hover:text-gray-400 transition-colors ease-in-out duration-300'
 				/>
 			</button>
-		</div>
+		</section>
 	)
 }
 

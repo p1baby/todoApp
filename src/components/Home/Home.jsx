@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import TodoItem from './item/TodoItem'
 import CreateTodoField from './create-todo-field/CreateTodoField'
+import TodoItem from './item/TodoItem'
 
 const data = [
     {
@@ -33,8 +33,8 @@ const Home = () => {
     const removeTodo = id => setTodolist([...todolist].filter(t => t._id !== id))
 
   return (
-    <div className='text-white w-4/5 mx-auto'>
-        <h1 className='text-2xl font-bold text-center mb-8'>Todo app by p1err</h1>
+    <section className='text-white w-4/5 mx-auto'>
+        <h1 className='text-2xl font-bold text-center mb-8'>TODO Application</h1>
         {todolist.map(todo => (
             <TodoItem 
             key={todo._id} 
@@ -43,7 +43,7 @@ const Home = () => {
             changeTodolist={changeTodolist}
             />))}
             <CreateTodoField setTodolist={setTodolist} />
-    </div>
+    </section>
   )
 }
 
